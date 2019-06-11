@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <style>
+
+        body{
+            background-color:#e6e6e6;
+            font-size: 26px;
+            color:black;       		
+        }
+    </style>
+    <script type='text/javascript'>        
+        function start() {
+            xhttp = new XMLHttpRequest();
+            xhttp.open('GET', 'bookbase.json', true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {                
+                    var json = eval('(' + xhttp.responseText + ')');
+                    document.getElementById('block').style.display = 'block';                                                                                   
+                    document.getElementById('result').innerHTML = json.bookbase[3].quantity + json.bookbase[6].quantity + json.bookbase[9].quantity + json.bookbase[13].quantity ; 
+            }
+        }
+    </script>
+</head>
+<body>
+     <h3>lab-7</h3>
+    <input type='button' value='Получить' onclick='start()' />
+    <br /><br />
+    <div id='block' style='display:none;'>
+    	
+        <hr />
+        <p>Сумма 4 7 10 и 14 quantity = <b><span id='result'></span></b></p>
+        <hr />
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+C:\Server\data\htdocs\test\lab10\lab10\bin\lab10.dll.config
+C:\Server\data\htdocs\test\lab10\lab10\bin\lab10.dll
+C:\Server\data\htdocs\test\lab10\lab10\bin\lab10.pdb
+C:\Server\data\htdocs\test\lab10\lab10\obj\Debug\lab10.csproj.CoreCompileInputs.cache
+C:\Server\data\htdocs\test\lab10\lab10\obj\Debug\lab10.dll
+C:\Server\data\htdocs\test\lab10\lab10\obj\Debug\lab10.pdb

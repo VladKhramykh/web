@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background: #e6e6e6;
+			font-style: italic;
+			font-size: 30px;
+		}
+		input{
+			font-style: italic;
+			font-size: 30px;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		function getInfoByName(){
+			var textValueName = $('#name').val();
+			$.post('database.php', {name: textValueName}).done(function(result)
+	        {
+	            $("#message").html(result);
+	        });
+		}
+
+		function getInfoById(){
+			var textValueId = $('#id').val();
+			$.post('database2.php', {id: textValueId}).done(function(result)
+	        {
+	            $("#message2").html(result);
+	        });
+		}
+		
+	</script>
+</head>
+<body>
+	<div>		
+		Введите имя:<br><input type="text" name="name" id="name" /><br>   
+	   	<br><input type="button" name="submit" value="Получить" onclick="getInfoByName()" /><br>
+	    <br><div id="message"></div>
+	    Введите ID:<br><input type="text" name="id" id="id" /><br>   
+	   	<br><input type="button" name="submit" value="Получить" onclick="getInfoById()" /><br>
+	    <br><div id="message2"></div>
+	</div>
+	
+</body>
+</html>

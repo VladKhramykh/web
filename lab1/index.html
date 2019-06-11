@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background: #e6e6e6;
+			font-style: italic;
+			font-size: 30px;
+		}
+		input{
+			font-style: italic;
+			font-size: 30px;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+	function getAddress(){
+	    var name = $('#name').val();
+	    $.ajax({
+	        type: "POST",
+	        url: "database.php",
+	        data: {name:name}
+	    }).done(function(result)
+	        {
+	            $("#message").html(result);
+	        });
+	}
+	</script>
+</head>
+<body>
+	<div>
+		
+		Введите имя:<br><input type="text" name="name" id="name" /><br>   
+	   	<br><input id="submit" type="button" name="submit" id="submit" value="Получить" onClick = "getAddress()" /><br>
+	    <br><div id="message"></div>
+	</div>
+	
+</body>
+</html>

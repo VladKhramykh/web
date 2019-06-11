@@ -1,0 +1,11 @@
+C:\Server\data\htdocs\test\lab10\Host\bin\Debug\Host.exe.config
+C:\Server\data\htdocs\test\lab10\Host\bin\Debug\Host.exe
+C:\Server\data\htdocs\test\lab10\Host\bin\Debug\Host.pdb
+C:\Server\data\htdocs\test\lab10\Host\bin\Debug\lab10.dll
+C:\Server\data\htdocs\test\lab10\Host\bin\Debug\lab10.pdb
+C:\Server\data\htdocs\test\lab10\Host\bin\Debug\lab10.dll.config
+C:\Server\data\htdocs\test\lab10\Host\obj\Debug\Host.csprojAssemblyReference.cache
+C:\Server\data\htdocs\test\lab10\Host\obj\Debug\Host.csproj.CoreCompileInputs.cache
+C:\Server\data\htdocs\test\lab10\Host\obj\Debug\Host.csproj.CopyComplete
+C:\Server\data\htdocs\test\lab10\Host\obj\Debug\Host.exe
+C:\Server\data\htdocs\test\lab10\Host\obj\Debug\Host.pdb

@@ -1,0 +1,16 @@
+ВАЛЕРА
+
+var myDiv = document.getElementById("button");
+myDiv.addEventListener("click", function(){
+	var request = new XMLHttpRequest();
+	request.open("GET", "text.txt",false);
+	request.send();
+	var answer = document.getElementById("answer");
+	if(request.status == 200){		
+		answer.innerHTML = request.responseText;
+	}
+	else{
+		answer.innerHTML = "Ошибка " + request.status;
+	}
+	
+})	

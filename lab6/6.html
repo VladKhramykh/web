@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3</title>
+	
+	<style type="text/css">
+	body{
+		margin:0;
+		font-family: 'Open Sans', sans-serif;
+		font-size:130%;
+		background: #e6e6e6;
+	}
+
+	.circle{
+		width:100px;
+		height: 100px;
+		background: skyblue;
+		border-radius: 50%;
+		position: relative;
+		margin-top:10%;
+		margin-left:50%;
+	}
+    .active{
+        background: #ffd800;
+        transition: background 5s ease-in;
+    }
+
+	.switcher{
+		background: #2a2a2a;
+		margin-top:30%;
+		display:table-cell;
+        
+	}
+
+	.center{
+		padding-top:30%;
+		padding-left:40%;
+	}
+
+</style>
+</head>
+<body>
+
+	<script src="jquery-3.3.1.min.js"></script>
+
+	<script>
+        window.onload = function () {
+            
+            heading = document.createElement("h1");
+            heading_text = document.createTextNode("Big Head!");
+            heading.appendChild(heading_text);
+            document.body.appendChild(heading);//в конец body
+            var StrJson = JSON.stringify(heading);
+            
+        }
+		
+	</script>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<div id="demo"></div><br><br>
+
+<input id="id" type="text" placeholder="Enter here" name="id"/>
+<input id="button" type="button" onclick="deleteDeveloper()" value="Delete and show"/><br><br><br>
+<div id="deleted">Deleted: </div>
+
+<script>
+var jsonText = '{ "developers" : [' +
+'{ "firstName":"Vlad" , "lastName":"Kovach" },' +
+'{ "firstName":"Dennis" , "lastName":"Starij" },' +
+'{ "firstName":"Vitalya" , "lastName":"Vitya" },'+
+'{ "firstName":"Eugen" , "lastName":"JEKA" },'+
+'{ "firstName":"Valera" , "lastName":"Valera" },'+
+'{ "firstName":"3a VDV" , "lastName":"Valakas" } ]}';
+
+var obj = JSON.parse(jsonText);
+
+
+window.onload = show();
+
+function show(){
+	for(i = 0; i<obj.developers.length;i++){
+		document.getElementById("demo").innerHTML += i+1 +".\t"+ obj.developers[i].firstName + " - " + obj.developers[i].lastName + "<br>";
+	}
+}
+
+function showDeleted(id){
+	document.getElementById("deleted").innerHTML = "Deleted: " + obj.developers[id].firstName + " - " + obj.developers[id].lastName
+}
+
+function findMaxKey() {
+	var maxKey =0;
+	for(var i=1; i<obj.developers.length;i++){
+		if(obj.developers[i].firstName.length > obj.developers[maxKey].firstName.length)
+			maxKey=i;
+	}
+	return maxKey;
+}
+
+function deleteDeveloper(){
+	var id = document.getElementById("id").value-1;
+	if(id == -1){
+		var max = findMaxKey();
+		showDeleted(max);
+		obj.developers.splice(max,1);
+		
+	}		
+	else{
+		showDeleted(id);
+		obj.developers.splice(id,1);		
+	}
+	document.getElementById("demo").innerHTML = "";
+	show();
+}
+
+
+</script>
+
+</body>
+</html>
